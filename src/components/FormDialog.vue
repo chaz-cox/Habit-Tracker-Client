@@ -1,7 +1,7 @@
 <template>
     <v-dialog 
     :modelValue="visible" 
-    @update:modelValue="visible = $event" 
+    @update:modelValue="visible == $event" 
     max-width="800px"
     persistent
     >
@@ -43,13 +43,13 @@
 <script lang="ts">
 export default {
     props: {
-        title: String,
+        title: string,
         fields:{
             type: Array as () => Field[],
             default: null
         },
         visible: Boolean,
-        error: String,
+        error: string,
     },
     data(){
         return{
@@ -112,12 +112,12 @@ export default {
 };
     interface Field{
         id: string,
-        title: String,
-        type: String,
+        title: string,
+        type: string,
         required: Boolean,
         value?: any,
-        options?: String[],
-        hint?: String,
+        options?: string[],
+        hint?: string,
     }
     /* interface Form{ */
     /*     title: string, */

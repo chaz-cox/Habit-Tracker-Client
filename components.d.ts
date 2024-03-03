@@ -9,11 +9,9 @@ declare module 'vue' {
   export interface GlobalComponents {
     FormDialog: typeof import('./src/components/FormDialog.vue')['default']
     HabitPage: typeof import('./src/components/HabitPage.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     HeroPage: typeof import('./src/components/HeroPage.vue')['default']
     HomePage: typeof import('./src/components/HomePage.vue')['default']
     InfoDialog: typeof import('./src/components/InfoDialog.vue')['default']
-    Landing: typeof import('./src/components/Landing.vue')['default']
     LearnMore: typeof import('./src/components/LearnMore.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
