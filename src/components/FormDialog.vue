@@ -43,20 +43,20 @@
 <script lang="ts">
 export default {
     props: {
-        title: string,
+        title: String,
         fields:{
             type: Array as () => Field[],
             default: null
         },
         visible: Boolean,
-        error: string,
+        error: String,
     },
     data(){
         return{
             rules: {
                 required: value => !!value || 'Field is required',
             },
-            fieldValues: {} as Record<string,string>
+            fieldValues: {} as Record<String,String>
         };
     },
     mounted: function(){
@@ -84,7 +84,7 @@ export default {
                 }
             });
         },
-        handleChange(id: string, value: string){
+        handleChange(id: String, value: String){
             this.fieldValues[id] = value;
             this.$emit('inputChange',id, value);
         },
@@ -111,13 +111,13 @@ export default {
     },
 };
     interface Field{
-        id: string,
-        title: string,
-        type: string,
+        id: String,
+        title: String,
+        type: String,
         required: Boolean,
         value?: any,
-        options?: string[],
-        hint?: string,
+        options?: String[],
+        hint?: String,
     }
     /* interface Form{ */
     /*     title: string, */
