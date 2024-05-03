@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--no-warnings' vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "noerr": "cross-env NODE_OPTIONS='--no-warnings' vite build"
+    "noerr":"vite build && vite preview",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@mdi/font": "7.0.96",

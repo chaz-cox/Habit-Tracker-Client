@@ -1,7 +1,7 @@
 <template>
     <v-dialog 
     :modelValue="visible" 
-    @update:modelValue="visible == $event" 
+    @update:modelValue="visible = $event" 
     max-width="800px"
     persistent
     >
@@ -56,7 +56,7 @@ export default {
             rules: {
                 required: value => !!value || 'Field is required',
             },
-            fieldValues: {} as Record<String,String>
+            fieldValues: {} as Record<string,string>
         };
     },
     mounted: function(){
@@ -84,7 +84,7 @@ export default {
                 }
             });
         },
-        handleChange(id: String, value: String){
+        handleChange(id: string, value: string){
             this.fieldValues[id] = value;
             this.$emit('inputChange',id, value);
         },
@@ -111,7 +111,7 @@ export default {
     },
 };
     interface Field{
-        id: String,
+        id: string,
         title: String,
         type: String,
         required: Boolean,
